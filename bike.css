@@ -4,79 +4,64 @@
 }
 body{
     background-image: url(1011bicicletasruta-1074902.jpg);
+    background-color: white;
     background-size: cover ;
+    height: 85%;
     background-repeat:repeat-y;
 
 }
-#bastidor{
-    height: 1000px;
-    width: 1250px;
-    margin: 0.25px auto;
+header{
+    z-index: 2;
+    font-family: sans-serif;
+    margin: 0 auto;
 }
-#head{
-    border: 7px ridge silver;
-    background-image: url(1_0jhl4qFmymQ3HGcPeJCBbw.jpeg);
-    height: 10%;
-    color: darkred;
-    display: flex;  
-    justify-content: center;  
-    align-items: center;
+nav{
+    /*background-color: grey;*/
+    display:flex;
 }
-h1{
+ul{
+    list-style: none;
+}
+#menu li>a{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+}
+
+#menu li>a:hover{
+    color: black;
+    background-color: #eaeaea;
+}
+#menu>li{
+    float: left;
     text-align: center;
-    font-style:oblique; 
-    margin: 10px; 
 }
-#nav{
-    height: 3%;
-    border: 5px ridge darkslategrey;
-    background-color:dodgerblue;
-    font-style: oblique;
-    font-size: 20px;
-    color: darkblue;
-    display: flex;
+#menu li>ul{
+    display: none;
 }
-#bodypanel{
-    height: 85%;
-    background-color:dimgrey;
-    display: flex;
+#menu li:hover>ul{
+    display: block;
 }
+
 .body{
-    background-color: white;
+    display: block;
+    background-image: url(Bike-blue_1920x1080.jpg);
     border-radius: 10px;
-    border:  5px ridge red;
+    border:  5px ridge rgb(21, 3, 65);
+    color: white;
     padding: 10px;
-    width: 85%;
-    float: right;
-}
-.panel{
-    background-color: moccasin;
-    border-radius: 10px;
-    border :5px ridge blueviolet;
-    margin: 1px;
-    padding: 10px;
-    width: 15%; 
-    float:left;
-    justify-content: left;
-   /* text-align: center;*/
-    
-}
-.arbol{
-    width: 80%;
+    width: auto;
 }
 .pie{
+    display: block;
     height:3% ;
-    background-color: black;
+    background-color:blue;
     color: white;
-    display: flex;
-}
-.cell{
-    margin: 3px;
-    padding: 5px;
-    border: 1px ridge gray;
+    text-align: center;
+   
     
 }
-ul li ::marker{
-    color: black;
-    font-size: 1.5em;
-}
+
