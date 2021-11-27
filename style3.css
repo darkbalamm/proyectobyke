@@ -6,7 +6,10 @@
 body{
     font-family: sans-serif;
     padding: 90px 20px 0;
-    background-image: url(viaje-por-carretera.jpg);
+   background-image: url(sky-cloud-blue-nature-fair.jpg);
+   background-size:cover;
+   /*background-color:saddlebrown;*/
+   height: auto;
 }
 .header{
     background-color: brown;
@@ -69,18 +72,62 @@ body{
 }
 main{
     background-color: yellowgreen;
+    border-color: black;
+    border-style: solid;
+    padding: 25px 25px;
     column-width: 100%;
     background: none;
-    color:brown;
+    color:black;
     font-size: 25px;
+   /* height: 2500px;*/
+   height: auto;
+    margin: 0;
 }
 .img_body{
-    display: flex;
+   /* background-color:grey;*/
+    /*display: flex;
+    display: grid;
+    grid-template-columns: 2;*/
+    align-content: center;
 }
+/*article{
+    background-color: white;
+}*/
+.img-div{
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: 2;
+    border-color:3px black;
+}
+.marco{
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+}
+footer{
+    display: flex;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    
+}
+.futlis{
+    display: flex;
+    margin-right: 20px;
+    list-style: none; 
+}
+.fut-menu-item{
+    font-size: 15px;
+    margin: 0 10px;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
 @media (max-width: 768px){
     body{
         padding-top: 70px ;
-        background-image: url(Bike-blue_1920x1080.jpg);
+       /* background-image: url(Bike-blue_1920x1080.jpg);*/
         display: block;
     }
     .header{
@@ -127,7 +174,7 @@ main{
         display:block;
     }
     main{
-        color: white;
+        color: black;
     }
     
 }
