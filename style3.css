@@ -6,7 +6,7 @@
 body{
     font-family: sans-serif;
     padding: 90px 20px 0;
-   background-image: url(sky-cloud-blue-nature-fair.jpg);
+   background-image: url(fondo4.jpg);
    background-size:cover;
    /*background-color:saddlebrown;*/
    height: auto;
@@ -72,12 +72,12 @@ body{
 }
 main{
     background-color: yellowgreen;
-    border-color: black;
+    border-color: rgb(4, 219, 15);
     border-style: solid;
     padding: 25px 25px;
     column-width: 100%;
     background: none;
-    color:black;
+    color: rgb(15, 185, 58);
     font-size: 25px;
    /* height: 2500px;*/
    height: auto;
@@ -104,6 +104,13 @@ main{
     border-style: solid;
     border-width: 5px;
     border-radius: 5px;
+}
+.foto{
+    border-color: cornflowerblue;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    width: 480px;
 }
 footer{
     display: flex;
