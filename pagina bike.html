@@ -6,7 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style3.css">
     <script src="https://kit.fontawesome.com/cf52281e87.js" crossorigin="anonymous"></script>
+
     <title>otra cosa :)</title>
+    <style>
+        div{
+            display: none;
+        }
+    </style>
+    <script>
+
+        function showPage(page){
+
+            document.querySelectorAll('div').forEach(div =>{
+                div.style.display='none';
+            });
+            document.querySelector(`#${page}`).style.display='block';
+        }
+        document.addEventListener('DOMContentLoaded',function(){
+            document.querySelectorAll('button').forEach(button=>{
+                button.onclick=function(){
+                    showPage(this.dataset.page);
+                };
+            });
+        });
+        /////////
+        const navToogle=document.querySelector(".nav_toogle")
+        const navMenu=document.querySelector(".nav_menu")
+
+        navToogle.addEventListener("click",()=>{
+            navMenu.classList.toggle("nav-menu_visible")
+        })
+        
+
+    </script>
 </head>
 <body>
     <header class="header">
@@ -15,105 +47,153 @@
             <button class="nav-toggle">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-menu">
-                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">inicio</a></li>
-                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">piezas</a></li>
+            <!--<ul class="nav-menu">
+                <li class="nav-menu-item" ><a href="#" class="nav-menu-link nav-link" data-page="page1">inicio</a></li>
+                <li class="nav-menu-item" ><a href="#" class="nav-menu-link nav-link" data-page="page2">piezas</a></li>
                 <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">sugerencias y comentarios</a></li>
                 <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link  nav-menu-link_active">estadisticas</a></li>
+            </ul>-->
+            <ul class="nav-menu">
+                <li class="nav-menu-item" ><button class="" data-page="page1">inicio</button></li>
+                <li class="nav-menu-item" ><button class="" data-page="page2">piezas</button></li>
+                <li class="nav-menu-item" ><button class="" data-page="page3">sugerencias y comentarios</a></li>
+                <li class="nav-menu-item" ><button class="" data-page="page4">estadisticas</a></li>
             </ul>
 
         </nav>
     </header>
     <main>
-        <div>
+        <p>
+            <ul>
+                <li><button class="" data-page="page1">inicio</button></li>
+                <li><button class="" data-page="page2">piezas</button></li>
+                <li><button class="" data-page="page3">sugerencias y comentarios</a></li>
+                <li><button class="" data-page="page4">estadisticas</a></li>
+            </ul>
+        </p>
+
+        <div id="page1">
             <article>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt numquam voluptas accusamus, laudantium nostrum aperiam sequi fugiat molestias inventore reiciendis repellendus fugit rem eveniet placeat laborum ratione at sed. Vero voluptatibus doloribus asperiores officiis culpa sit ullam itaque reiciendis possimus nemo ab, nisi, repudiandae velit natus totam similique repellat aliquid fugiat. Soluta cupiditate, numquam enim veniam nisi fugit ducimus consectetur similique quia error est quidem autem maxime alias sapiente voluptatum voluptatem, quis perferendis? Quae reiciendis culpa fugit. Quidem nemo deleniti eaque distinctio deserunt, mollitia quae voluptatibus, omnis provident fugit placeat, illum voluptatum neque architecto sit magnam. Eveniet similique quos vitae.
             </article>
-            <div class="img-div">
+            <p class="img-div">
                 <ul class="img_body">
                     <il><a href=""> <img src="platos_compact_maillotmag_2.jpg" alt=""  height= 280px></a></il>
                     <il ><a href=""><img class="marco"  src="cti-colombia.jpg" alt="" height=280px> </a></il>
                     <il><a href=""></a><img src="Textocometario-Slide-300x143.png" alt="" width=400px> </il>
                 </ul>
-            </div>
+            </p>
         </div>
-        <div>cuadro: 
-            <ul>
-                <li>tubo superior
-                    <div class="foto"><img src="cuadro.svg" alt="" width="470"></div>
-                </li>
-                <li>tubo inferior
-                    <div class="foto"><img src="cuadro.svg" alt="" width="470"></div>
-                </li>
-                <li>vaina superior
-                    <div class="foto"><img src="cuadro.svg" alt="" width="470"></div>
-                </li>
-                <li>vaina inferior
-                    <div class="foto"><img src="cuadro.svg" alt="" width="470"></div>
-                </li>
-                <li>tubo de sillin
-                    <div class="foto"><img src="cuadro.svg" alt="" width="470"></div>
-                </li>
-                <li>platos o " estrellas
-                    <div class="foto"><img src="plato.jpg" alt="" width="470"></div>
-                </li>
-                <li>biela
-                    <div class="foto"><img src="biela.jpg.jpg" alt="" width="470"></div>
-                </li>
-                <li>pedal
-                    <div class="foto"><img src="pedal.jpg" alt="" width="470"></div>
-                </li>
-            </ul>
+        <div id="page2">
+            
+        
+            <article>cuadro: 
+                <ul>
+                    <li>tubo superior
+                        <p class="foto"><img src="cuadro.svg" alt="" width="470"></p>
+                    </li>
+                    <li>tubo inferior
+                        <p class="foto"><img src="cuadro.svg" alt="" width="470"><p>
+                    </li>
+                    <li>vaina superior
+                        <p class="foto"><img src="cuadro.svg" alt="" width="470"></p>
+                    </li>
+                    <li>vaina inferior
+                        <p class="foto"><img src="cuadro.svg" alt="" width="470"></p>
+                    </li>
+                    <li>tubo de sillin
+                        <p class="foto"><img src="cuadro.svg" alt="" width="470"></p>
+                    </li>
+                    <li>platos o " estrellas
+                        <p class="foto"><img src="plato.jpg" alt="" width="470"></p>
+                    </li>
+                    <li>biela
+                        <p class="foto"><img src="biela.jpg.jpg" alt="" width="470"></p>
+                    </li>
+                    <li>pedal
+                        <p class="foto"><img src="pedal.jpg" alt="" width="470"></p>
+                    </li>
+                </ul>
+            <article>
+            <article>Cadena <p class="foto"><img src="cadena.jpg" alt="" width="470"></p></article>
+            <article>
+                ruedas
+                <ul>
+                    <li> rayos<p class="foto"><img src="rayos.jpg" alt="" width="470"></p></li>
+                    <li>buje <p class="foto"><img src="buje.jpg" alt="" width="470"></p></li>
+                    <li>llanta <p class="foto"><img src="cubierta.jpg" alt="" width="470"></p></li>
+                    <li>valvula<p class="foto"><img src="valvula.jpg" alt="" width="470"></p></li>
+                    <li>piñones <p class="foto"><img src="piñon.jpg" alt="" width="470"></p></li>
+                </ul>
+            </article>
+            <article>manubrio:
+                <ul>
+                    <li>potencia
+                        <p class="foto">
+                            <img src="potencia1.jpg" alt="" width="470"><img src="potencia2.jpg" alt="" width="470"><img src="potencia3.jpg" alt="" width="470">
+                        </p>
+                    </li>
+                    <li>cuerno
+                        <p class="foto">
+                            <img src="cuerno1jpg.jpg" alt="" width="470"><img src="Cuerno2.jpg" alt="" width="470"><img src="cuerno3.jpg" alt="" width="470">
+                        </p>
+                    </li>
+                    <li>manubrio
+                        <p class="foto"><img src="manubrio1.jpg" alt="" width="470"><img src="manubrio2.jpg" alt="" width="470"><img src="manubrio3.jpg" alt="" width="470"></p>
+                    </li>
+                    <li>telescopio <p class="foto"><img src="telescopio.jpg" alt="" width="470"></p></li>
+                    <li>horquilla <p class="foto"><img src="Horquilla.jpg" alt="" width="470"></p></li>
+                    <li>amortiguador <p class="foto"><img src="amortiguador.jpg" alt="" width="470"></p></li>
+                    <li>puños <p class="foto"><img src="puños.jpg" alt="" width="470"></p></li>
+                </ul>
+            </article>
+            <article>asiento:
+                <ul>
+                    <li>sillin <p class="foto"><img src="asiento.jpg" alt="" width="470"></p></li>
+                    <li>tija <p class="foto"><img src="tija.jpg" alt="" width="470"></p></li>
+                </ul>
+            </article>
+            <article>frenos:
+                <ul>
+                    <li>frenos delanteros <p class="foto"><img src="fren_del.jpg" alt="" width="470"></p></li>
+                    <li>frenos traceros <p class="foto"><img src="fren_trac.jpg" alt="" width="470"></p></li>
+                </ul>
+            </article>
+            <article>cambios:
+                <ul>
+                    <li>cambios delanteros <p class="foto"><img src="camb_del.jpg" alt="" width="470"></p></li>
+                    <li>cambios traceros <p class="foto"><img src="camb_trac.jpg" alt="" width="470"></p></li>
+                </ul>
+            </article>
         </div>
-        <div>Cadena <div class="foto"><img src="cadena.jpg" alt="" width="470"></div></div>
-        <div>
-            ruedas
-            <ul>
-                <li> rayos<div class="foto"><img src="rayos.jpg" alt="" width="470"></div></li>
-                <li>buje <div class="foto"><img src="buje.jpg" alt="" width="470"></div></li>
-                <li>llanta <div class="foto"><img src="cubierta.jpg" alt="" width="470"></div></li>
-                <li>valvula<div class="foto"><img src="valvula.jpg" alt="" width="470"></div></li>
-                <li>piñones <div class="foto"><img src="piñon.jpg" alt="" width="470"></div></li>
-            </ul>
+        <div id="page3">
+            <table>
+                <tr><th colspan="2"><h3 align="center"> DATOS DE COMENTARIO</h3></th></tr>
+                <tr>
+                    <td align="right">NOMBRE</td>
+                    <td><input type="text" nom="nombre"></input></td>
+                </tr>
+                <tr>
+                    <td align="right">CORREO</td>
+                    <td><input type="email" name="dir" id=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>SEXO
+                        <input type="radio" name="sx" id="h" checked>HOMBRE
+                        <input type="radio" name="sx" id="m">MUJER
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">comentario</td>
+                    <td><input type="text" name="comentario"></td>
+
+                </tr>
+            </table>
         </div>
-        <div>manubrio:
-            <ul>
-                <li>potencia
-                    <div class="foto">
-                        <img src="potencia1.jpg" alt="" width="470"><img src="potencia2.jpg" alt="" width="470"><img src="potencia3.jpg" alt="" width="470">
-                    </div>
-                </li>
-                <li>cuerno
-                    <div class="foto">
-                        <img src="cuerno1jpg.jpg" alt="" width="470"><img src="Cuerno2.jpg" alt="" width="470"><img src="cuerno3.jpg" alt="" width="470">
-                    </div>
-                </li>
-                <li>manubrio
-                    <div class="foto"><img src="manubrio1.jpg" alt="" width="470"><img src="manubrio2.jpg" alt="" width="470"><img src="manubrio3.jpg" alt="" width="470"></div>
-                </li>
-                <li>telescopio <div class="foto"><img src="telescopio.jpg" alt="" width="470"></div></li>
-                <li>horquilla <div class="foto"><img src="Horquilla.jpg" alt="" width="470"></div></li>
-                <li>amortiguador <div class="foto"><img src="amortiguador.jpg" alt="" width="470"></div></li>
-                <li>puños <div class="foto"><img src="puños.jpg" alt="" width="470"></div></li>
-            </ul>
-        </div>
-        <div>asiento:
-            <ul>
-                <li>sillin <div class="foto"><img src="asiento.jpg" alt="" width="470"></div></li>
-                <li>tija <div class="foto"><img src="tija.jpg" alt="" width="470"></div></li>
-            </ul>
-        </div>
-        <div>frenos:
-            <ul>
-                <li>frenos delanteros <div class="foto"><img src="fren_del.jpg" alt="" width="470"></div></li>
-                <li>frenos traceros <div class="foto"><img src="fren_trac.jpg" alt="" width="470"></div></li>
-            </ul>
-        </div>
-        <div>cambios:
-            <ul>
-                <li>cambios delanteros <div class="foto"><img src="camb_del.jpg" alt="" width="470"></div></li>
-                <li>cambios traceros <div class="foto"><img src="camb_trac.jpg" alt="" width="470"></div></li>
-            </ul>
+        <div id="page4">
+            <article><h1>se encuentra en desarrollo :V</h1></article>
         </div>
         
     </main>

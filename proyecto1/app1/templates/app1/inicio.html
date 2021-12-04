@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--<link rel="stylesheet" href="gestion.css">-->
+  <style>
+    body{
+      background-image: url("https://i.blogs.es/e32e91/trucos-enfocar-fotografia-paisaje-01/1366_2000.jpg");
+    }
+    main{
+      background-color: white;
+      width: auto;
+      height: max-content;
+      margin-right: 20px;
+      margin-left: 20px;
+      margin-top: 20px;
+      padding: 1em;
+      
+    }
+    .marco{
+      margin: 30px 20px 20px;
+    }
+
+    footer{
+      background-color: black;
+      color:white;
+      
+    }
+  </style>
+  <title>{% block title %}inicio{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Dragonbyke</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{%url 'inicio'%}">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{%url 'piezas'%}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Piezas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">cuadro</a></li>
+                <li><a class="dropdown-item" href="#">rueda</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">todas</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'comentarios'%}">Comentarios</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'estadisticas'%}">estadisticas</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="buscar" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  <main>
+    <article>
+      <h1>Por  el amor a lo que amas</h1>
+      {% block content %}
+        <div class="marco">
+          <h1>Tu mejor amiga de tu bicitleta</h1>
+          <h3>Para las amantes de recorrer kilometro por kilometro de pavimento, para los que llevan a su mejor amiga a escalar, para los iniciadores y que muestran el amor y respeto al ciclismo y para los experimentados en el extraodirnario mundo del ciclismos, no hay nada mejor que conocer a tu mejor amiga tu bicitleta y conocer como funciona y saber que cambiar o que darle mantenimiento para que tambien este en perfecto estado y pueda brindarte mas horas del la pacion del ciclismo </h3>
+          <ul>
+            <h2>Piezas</h2>
+            <li><a href=""></a><h4>manubrio</h4></li>
+            <li><a href=""></a><h4>cuadro</h4> </li>
+            <li><a href=""></a><h4>ruedas</h4> </li>
+            <li><a href=""></a><h4>cambios</h4></li>
+            <li><a href=""></a><h4>frenos</h4> </li>
+            <li><a href=""></a><h4>accesorios</h4></li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="row align-items-end">
+            <div class="col"> <div><img src="https://imagenescityexpress.scdn6.secure.raxcdn.com/sites/default/files/4-rutas-en-mexico-para-ciclistas.jpg" alt="" width=200px></div></div>
+            <div class="col"> <div><img src="https://thumbs.dreamstime.com/b/silueta-del-ciclista-del-atleta-que-monta-la-bici-en-un-rastro-rocoso-72911233.jpg" alt="" width=200px></div></div>
+            <div class="col"> <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIu9MZ9qouGIiPoG8vjXnYT80_cRWBeZbo9g&usqp=CAU" alt="" width=200px></div></div>
+          </div>
+        </div>
+        {%endblock%}
+    </article>
+
+  </main>
+
+  <footer>
+    <ul>
+      <li>Nombre: Balamm salvador lucio lopez</li>
+      <li><a href="http://">facebook</a></li>
+      <li><a href="http://">instagram</a></li>
+    </ul>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

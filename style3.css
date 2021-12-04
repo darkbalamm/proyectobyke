@@ -130,6 +130,12 @@ footer{
     line-height: 60px;
     text-transform: uppercase;
 }
+button{
+    background-color:black;
+    color: white;
+    border:2px white;
+    height:45px ;
+}
 
 @media (max-width: 768px){
     body{
@@ -181,7 +187,7 @@ footer{
         display:block;
     }
     main{
-        color: black;
+        color: white;
     }
     
 }
