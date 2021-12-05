@@ -1,0 +1,13 @@
+{% extends "app1/inicio.html" %}
+
+{% block title %}Frenos{%endblock%}
+
+{% block content %}
+
+    <h1>Frenos</h1>
+    <ol>
+        <li><a href="{% url 'fdel' %}"  rel="noopener noreferrer">Frenos  de la llanta delantera</a></li>
+        <li><a href="{% url 'ftrac' %}"  rel="noopener noreferrer">Frenos  de la llanta traceros</a></li>
+    </ol>
+
+{%endblock%}

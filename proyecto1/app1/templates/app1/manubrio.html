@@ -1,0 +1,15 @@
+{% extends "app1/inicio.html" %}
+
+{% block title %}Manubrio{%endblock%}
+
+{% block content %}
+
+    <h1>Manubrio</h1>
+    <ol>
+        <li><a href="{%url 'horquilla' %}" rel="noopener noreferrer">Horquilla</a></li>
+        <li><a href="{% url 'man' %}" rel="noopener noreferrer">Manubrio</a></li>
+        <li><a href="{% url 'puños' %}" rel="noopener noreferrer">Puños</a></li>
+        <li><a href="{% url 'poder' %}" rel="noopener noreferrer">poder</a></li>
+    </ol>
+
+{%endblock%}

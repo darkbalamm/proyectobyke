@@ -1,0 +1,57 @@
+{% extends "app1/inicio.html" %}
+
+{% block title %}Piezas{%endblock%}
+
+{% block content %}
+
+    <h1>Todas las Piezas </h1>
+    <ol>
+        <li><a href="{% url 'manubrio' %}"  rel="noopener noreferrer">Manubrio</a></li>  
+            <ol>
+                <li><a href="{% url 'horquilla' %}"  rel="noopener noreferrer">Horquilla</a></li>
+                <li><a href="{% url 'man' %}"  rel="noopener noreferrer">Manubrio</a></li>
+                <li><a href="{% url 'puños' %}"  rel="noopener noreferrer">Puños</a></li>
+                <li><a href="{% url 'poder' %}"  rel="noopener noreferrer">Poder</a></li>
+            </ol>
+        <li><a href="{% url 'ruedas' %}"  rel="noopener noreferrer">Ruedas</a></li>
+            <ol>
+                <li><a href="{% url 'rayos' %}"  rel="noopener noreferrer">Rayos</a></li>
+                <li><a href="{% url 'buje' %}"  rel="noopener noreferrer">Buje</a></li>
+                <li><a href="{% url 'llanta' %}"  rel="noopener noreferrer">Llanta</a></li>
+                <li><a href="{% url 'cubierta' %}"  rel="noopener noreferrer">Cubierta</a></li>
+                <li><a href="{% url 'valvula' %}"  rel="noopener noreferrer">Valvula</a></li>
+                <li><a href="{% url 'piñones' %}"  rel="noopener noreferrer">Piñones</a></li>
+            </ol>
+        <li><a href="{% url 'cuadros' %}"  rel="noopener noreferrer">Cuadro</a></li>
+            <ol>
+                <li><a href="{% url 'tsup' %}"  rel="noopener noreferrer">Tubo superior</a></li>
+                <li><a href="{% url 'tinf' %}"  rel="noopener noreferrer">Tubo inferior</a></li>
+                <li><a href="{% url 'tsillin' %}"  rel="noopener noreferrer">Tubo de la silla</a></li>
+                <li><a href="{% url 'plato' %}"  rel="noopener noreferrer">Platos o Estrellas</a></li>
+                <li><a href="{% url 'vsup' %}"  rel="noopener noreferrer">Vaina superior</a></li>
+                <li><a href="{% url 'vinf' %}"  rel="noopener noreferrer">Vaina inferior</a></li>
+                <li><a href="{% url 'biela' %}"  rel="noopener noreferrer">Biela</a></li>
+                <li><a href="{% url 'pedal' %}"  rel="noopener noreferrer">Pedal</a></li>
+                <li><a href="{% url 'telescopio' %}"  rel="noopener noreferrer">Telescopio</a></li>
+            </ol>
+        <li><a href="{% url 'asiento' %}"  rel="noopener noreferrer">Asiento</a></li>
+            <ol>
+                <li><a href="{% url 'sillin' %}"  rel="noopener noreferrer">Sillin</a></li>
+                <li><a href="{% url 'tija' %}"  rel="noopener noreferrer">Tija</a></li>
+            </ol>
+        <li><a href="{% url 'frenos' %}"  rel="noopener noreferrer">Frenos</a></li>
+            <ol>
+                <li><a href="{% url 'fdel' %}"  rel="noopener noreferrer">Frenos  de la llanta delantera</a></li>
+                <li><a href="{% url 'ftrac' %}"  rel="noopener noreferrer">Frenos  de la llanta traceros</a></li>
+            </ol>
+        <li><a href="{% url 'cambios' %}"  rel="noopener noreferrer">Cambios</a></li>
+            <ol>
+                <li><a href="{% url 'cplato' %}" rel="noopener noreferrer">Cambios de plato</a></li>
+                <li><a href="{% url 'cpiñon' %}" rel="noopener noreferrer">Cambios de piñon</a></li>
+            </ol>
+        <li><a href="{% url 'cambios' %}"  rel="noopener noreferrer">Accesorios</a></li>
+            <ol>
+                <li><a href="{% url 'cadena' %}"  rel="noopener noreferrer">Cadena</a></li>
+            </ol>
+    </ol>
+{%endblock%}

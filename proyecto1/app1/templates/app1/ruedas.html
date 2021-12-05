@@ -1,0 +1,17 @@
+{% extends "app1/inicio.html" %}
+
+{% block title %}Ruedas{%endblock%}
+
+{% block content %}
+
+    <h1> Ruedas</h1>
+    <ol>
+        <li><a href="{% url 'rayos' %}"  rel="noopener noreferrer">Rayos</a></li>
+        <li><a href="{% url 'buje' %}"  rel="noopener noreferrer">Buje</a></li>
+        <li><a href="{% url 'llanta' %}"  rel="noopener noreferrer">Llanta</a></li>
+        <li><a href="{% url 'cubierta' %}"  rel="noopener noreferrer">Cubierta</a></li>
+        <li><a href="{% url 'valvula' %}"  rel="noopener noreferrer">Valvula</a></li>
+        <li><a href="{% url 'piñones' %}"  rel="noopener noreferrer">Piñones</a></li>
+    </ol>
+
+{%endblock%}

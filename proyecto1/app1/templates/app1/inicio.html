@@ -20,17 +20,16 @@
       margin-right: 20px;
       margin-left: 20px;
       margin-top: 20px;
-      padding: 1em;
+      padding: 2em;
       
     }
-    .marco{
-      margin: 30px 20px 20px;
-    }
-
     footer{
       background-color: black;
       color:white;
       
+    }
+    p:target {
+      background-color: gold;
     }
   </style>
   <title>{% block title %}inicio{% endblock %}</title>
@@ -38,35 +37,39 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Dragonbyke</a>
+        <a class="navbar-brand" href="{%url 'inicio'%}">Dragonbyke</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="vr"></div>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{%url 'inicio'%}">Inicio</a>
             </li>
+            <div class="vr"></div>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{%url 'piezas'%}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Piezas
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">cuadro</a></li>
-                <li><a class="dropdown-item" href="#">rueda</a></li>
+                <li><a class="dropdown-item" href="{% url 'manubrio'%}">Manubrio</a></li>
+                <li><a class="dropdown-item" href="{%url 'ruedas' %}">ruedas</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">todas</a></li>
+                <li><a class="dropdown-item" href="{% url 'mas'%}">mas</a></li>
               </ul>
             </li>
-
+            <div class="vr"></div>
             <li class="nav-item">
               <a class="nav-link" href="{%url 'comentarios'%}">Comentarios</a>
             </li>
-
+            <div class="vr"></div>
             <li class="nav-item">
               <a class="nav-link" href="{%url 'estadisticas'%}">estadisticas</a>
             </li>
+            <div class="vr"></div>
           </ul>
+        
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="buscar" aria-label="Search">
             <button class="btn btn-outline-light" type="submit">buscar</button>
@@ -76,21 +79,20 @@
     </nav>
   <main>
     <article>
-      <h1>Por  el amor a lo que amas</h1>
+      <h1 style="color: blue;">Por  el Amor a tu Pasion</h1>
       {% block content %}
         <div class="marco">
-          <h1>Tu mejor amiga de tu bicitleta</h1>
+          <h1>El mejor amigo de tu bicitleta</h1>
           <h3>Para las amantes de recorrer kilometro por kilometro de pavimento, para los que llevan a su mejor amiga a escalar, para los iniciadores y que muestran el amor y respeto al ciclismo y para los experimentados en el extraodirnario mundo del ciclismos, no hay nada mejor que conocer a tu mejor amiga tu bicitleta y conocer como funciona y saber que cambiar o que darle mantenimiento para que tambien este en perfecto estado y pueda brindarte mas horas del la pacion del ciclismo </h3>
-          <ul>
-            <h2>Piezas</h2>
-            <li><a href=""></a><h4>manubrio</h4></li>
-            <li><a href=""></a><h4>cuadro</h4> </li>
-            <li><a href=""></a><h4>ruedas</h4> </li>
-            <li><a href=""></a><h4>cambios</h4></li>
-            <li><a href=""></a><h4>frenos</h4> </li>
-            <li><a href=""></a><h4>accesorios</h4></li>
-          </ul>
-        </div>
+        </div>  
+        <h2>Piezas</h2>
+         <ol>
+           <li><a href="{% url 'manubrio' %}"  rel="noopener noreferrer"> manubrios</a></li>
+           <li><a href="{% url 'cuadros' %}"  rel="noopener noreferrer">cuadros</a> </li>
+           <li><a href="{% url 'asiento' %}"  rel="noopener noreferrer">Asiento</a></li>
+           <li><a href="{% url 'frenos' %}"  rel="noopener noreferrer">Frenos</a></li>
+           <li><a href="{% url 'mas' %}"  rel="noopener noreferrer">y mas...</a> </li>
+         </ol>
         <div class="container">
           <div class="row align-items-end">
             <div class="col"> <div><img src="https://imagenescityexpress.scdn6.secure.raxcdn.com/sites/default/files/4-rutas-en-mexico-para-ciclistas.jpg" alt="" width=200px></div></div>
@@ -106,8 +108,8 @@
   <footer>
     <ul>
       <li>Nombre: Balamm salvador lucio lopez</li>
-      <li><a href="http://">facebook</a></li>
-      <li><a href="http://">instagram</a></li>
+      <li><a href="https://www.facebook.com/balammtexatl/">facebook</a></li>
+      <li><a href="https://www.instagram.com/balammlucio/">instagram</a></li>
     </ul>
   </footer>
   

@@ -1,0 +1,20 @@
+{% extends "app1/inicio.html" %}
+
+{% block title %}Cuadros{%endblock%}
+
+{% block content %}
+
+    <h1>Cuadros</h1>
+    <ol>
+        <li><a href="{% url 'tsup' %}"  rel="noopener noreferrer">Tubo superior</a></li>
+        <li><a href="{% url 'tinf' %}"  rel="noopener noreferrer">Tubo inferior</a></li>
+        <li><a href="{% url 'tsillin' %}"  rel="noopener noreferrer">Tubo de la silla</a></li>
+        <li><a href="{% url 'plato' %}"  rel="noopener noreferrer">Platos o Estrellas</a></li>
+        <li><a href="{% url 'vsup' %}"  rel="noopener noreferrer">Vaina superior</a></li>
+        <li><a href="{% url 'vinf' %}"  rel="noopener noreferrer">Vaina inferior</a></li>
+        <li><a href="{% url 'biela' %}"  rel="noopener noreferrer">Biela</a></li>
+        <li><a href="{% url 'pedal' %}"  rel="noopener noreferrer">Pedal</a></li>
+        <li><a href="{% url 'telescopio' %}"  rel="noopener noreferrer">Telescopio</a></li>
+    </ol>
+
+{%endblock%}

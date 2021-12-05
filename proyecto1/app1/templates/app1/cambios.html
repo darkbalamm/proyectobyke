@@ -1,0 +1,13 @@
+{% extends "app1/inicio.html" %}
+
+{% block title %}Cambios{%endblock%}
+
+{% block content %}
+
+    <h1>Cambios</h1>
+    <ol>
+        <li><a href="{% url 'cplato' %}" rel="noopener noreferrer">Cambios de plato</a></li>
+        <li><a href="{% url 'cpiñon' %}" rel="noopener noreferrer">Cambios de piñon</a></li>
+    </ol>
+
+{%endblock%}
